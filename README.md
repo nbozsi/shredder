@@ -8,7 +8,7 @@ A CLI-utility to turn 1 good picture into 4 shitty ones.
 ```console
 $ py main.py <filename>
 ```
-This will output the new image in the working directory named `<filename>_2-200.<original extension>`.
+This will output the new image in the working directory named `<filename>_shredded_2-200.<original extension>`.
 ## Flags
 ### Count
 Number of "reshreds". Recommended to be even, cause with odd numbers, the result will look like its streched. (It's a feature, not a bug, FOR REAL.)  
@@ -25,7 +25,7 @@ $ py main.py <filename> --stripes <int>
 
 ### Output
 Path/name of the output file.  
-default: `<originalfilename>_<count>-<stripes>.<original extension>`
+default: `<originalfilename>_shredded_<count>-<stripes>.<original extension>`
 ```console
 $ py main.py <filename> --output <string>
 ```
