@@ -25,10 +25,10 @@ def try_options(image_filename):
 @click.command()
 @click.argument("filename")
 @click.option('-c', "--count", default=2, help="Number of reshreds", show_default=True)
-@click.option('-s', "--strips", default=200, help="Number of the strips", show_default=True)
+@click.option('-s', "--stripes", default=200, help="Number of the stripes", show_default=True)
 @click.option('-o', "--output", default=None, help="Name of the output file")
 @click.option('-f', "--force", is_flag=True, default=False, help="Forces your args, no help finding files/rounding count etc..")
-def hello(filename, count, strips, output, force):
+def hello(filename, count, stripes, output, force):
 
     if os.path.exists(filename) or force:
         input_image = Image.open(filename)
@@ -42,12 +42,14 @@ def hello(filename, count, strips, output, force):
         if ok == "" or ok == "y":
             count += 1
 
-    output_image = shredder(input_image, count, strips)
+    if stripes % 2 != 0 and not force:
+        print("You entered an odd number for stripes, so the result images will slightly differ in width.")
+    output_image = shredder(input_image, count, stripes)
     if output:
         output_image.save(output)
     else:
         name, extension = filename.split(".")
-        output_image.save(f"{name}_shredded_{count}-{strips}.{extension}")
+        output_image.save(f"{name}_shredded_{count}-{stripes}.{extension}")
 
 
 if __name__ == "__main__":
