@@ -35,3 +35,4 @@ Using this flag, the util will not print warnings, and recommend settings.
 ```console
 $ py main.py <filename> --force
 ```
+## Examples
