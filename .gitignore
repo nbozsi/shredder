@@ -1,0 +1,5 @@
+*.jpg
+*.png
+*.jfif
+settings.json
+*pyc
