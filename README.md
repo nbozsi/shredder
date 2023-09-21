@@ -9,21 +9,21 @@ A CLI-utility to turn 1 good picture into 4 shitty ones.
 $ py main.py <filename>
 ```
 This will output the new image in the working directory named `<filename>_shredded_2-200.<original extension>`.
-## Flags
-### Count
+## Flags🎏
+### Count🔁
 Number of "reshreds". Recommended to be even, cause with odd numbers, the result will look like its streched. (It's a feature, not a bug, FOR REAL.)  
 **default**: `2`
 ```console
 $ py main.py <filename> --count <int>
 ```
-### Stripes
+### Stripes✂️
 Number of stripes made from the image, when it's an odd number, the result images will slightly differ in width.  
 **default**: `200`
 ```console
 $ py main.py <filename> --stripes <int>
 ```
 
-### Output
+### Output📤
 Path/name of the output file.  
 **default**: `<originalfilename>_shredded_<count>-<stripes>.<original extension>`
 ```console
