@@ -12,7 +12,7 @@ This will output the new image in the working directory named `<filename>_shredd
 ## Flags
 ### Count
 Number of "reshreds". Recommended to be even, cause with odd numbers, the result will look like its streched. (It's a feature, not a bug, FOR REAL.)  
-default: `2`
+==default==: `2`
 ```console
 $ py main.py <filename> --count <int>
 ```
