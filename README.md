@@ -3,7 +3,7 @@
 A CLI-utility to turn 1 good picture into 4/16/256/... shitty ones.
 
 [Explanation](https://www.reddit.com/r/interestingasfuck/comments/95akrt/transforming_one_photo_of_a_dog_into_four_with_a/) (and my inspiration).  
-The aspect ratio of the small rectangles will be *2\*W : H*, the number of stripes has zero impact on this, (with a photo twice as high as wide, the small rectangles will be squares).  
+The aspect ratio of the small rectangles will be *2\*W : H*, the number of stripes has zero impact on this, (for example with a photo twice as high as wide, the small rectangles will always be squares).  
 **Table of Contents**
    * [Basic Usage](#basic-usage)
    * [Flags🎏](#flags)
