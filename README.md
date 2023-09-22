@@ -10,7 +10,7 @@ A CLI-utility to turn 1 good picture into 4 shitty ones.
       + [Count🔁](#count)
       + [Stripes✂️](#stripes)
       + [Output📤](#output)
-      + [Force](#force)
+      + [-w](#-w)
    * [Examples](#examples)
       + [Count - 2](#count-2)
          - [Stripes - 200](#stripes---200)
@@ -46,10 +46,10 @@ Path/name of the output file.
 $ py main.py <filename> --output <string>
 ```
 
-### Force
+### -w
 Using this flag, the util will not print warnings, and recommend settings.
 ```console
-$ py main.py <filename> --force
+$ py main.py <filename> -w
 ```
 ## Examples
 <p align="center">
