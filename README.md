@@ -36,13 +36,14 @@ Using this flag, the util will not print warnings, and recommend settings.
 $ py main.py <filename> --force
 ```
 ## Examples
-
+### The original image
 <p align="center">
   <img src="./examples/port_1.jpg" width=1500>
   The original image
 </p>
 
----  
+### Count 2
+#### Stripes 200
 
 ```console
 $ py main.py <filename>
@@ -52,7 +53,7 @@ $ py main.py <filename>
   <img src="./examples/port_1_shredded_2-200.jpg" width=1500>
 </p>
 
----
+#### Stripes 40
 
 ```console
 $ py main.py <filename> --stripes 40
@@ -62,7 +63,7 @@ $ py main.py <filename> --stripes 40
   <img src="./examples/port_1_shredded_2-40.jpg" width=1500>
 </p>
 
----
+#### Stripes 10
 
 ```console
 $ py main.py <filename> -s 10
