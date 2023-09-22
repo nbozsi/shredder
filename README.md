@@ -42,8 +42,10 @@ $ py main.py <filename> --force
   The original image
 </p>
 
-### Count 2
-#### Stripes 200
+---
+
+### Count - 2
+#### Stripes - 200
 
 ```console
 $ py main.py <filename>
@@ -53,7 +55,7 @@ $ py main.py <filename>
   <img src="./examples/port_1_shredded_2-200.jpg" width=1500>
 </p>
 
-#### Stripes 40
+#### Stripes - 40
 
 ```console
 $ py main.py <filename> --stripes 40
@@ -63,7 +65,7 @@ $ py main.py <filename> --stripes 40
   <img src="./examples/port_1_shredded_2-40.jpg" width=1500>
 </p>
 
-#### Stripes 10
+#### Stripes - 10
 
 ```console
 $ py main.py <filename> -s 10
@@ -75,6 +77,9 @@ $ py main.py <filename> -s 10
 
 ---
 
+### Count 4
+#### Stripes - 200
+
 ```console
 $ py main.py <filename> --count 4
 ```
@@ -83,7 +88,7 @@ $ py main.py <filename> --count 4
   <img src="./examples/port_1_shredded_4-200.jpg" width=1500>
 </p>
 
----
+#### Stripes - 40
 
 ```console
 $ py main.py <filename> -c 4 -s 40
