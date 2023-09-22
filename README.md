@@ -41,6 +41,7 @@ $ py main.py <filename> --force
   <img src="./examples/port_1.jpg" width=1500>
   The original image
 </p>
+
 ---  
 
 ```console
@@ -50,3 +51,5 @@ $ py main.py <filename>
 <p align="center">
   <img src="./examples/port_1_shredded_2-200.jpg" width=1500>
 </p>
+
+---
