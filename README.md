@@ -5,7 +5,6 @@ A CLI-utility to turn 1 good picture into 4 shitty ones.
 [Explanation](https://www.reddit.com/r/interestingasfuck/comments/95akrt/transforming_one_photo_of_a_dog_into_four_with_a/) (and my inspiration).  
 
 **Table of Contents**
-- [shredder](#shredder)
    * [Basic Usage](#basic-usage)
    * [Flags🎏](#flags)
       + [Count🔁](#count)
