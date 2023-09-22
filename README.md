@@ -4,6 +4,7 @@ A CLI-utility to turn 1 good picture into 4 shitty ones.
 
 [Explanation](https://www.reddit.com/r/interestingasfuck/comments/95akrt/transforming_one_photo_of_a_dog_into_four_with_a/) (and my inspiration).  
 
+## Table of Contents
 - [shredder](#shredder)
    * [Basic Usage](#basic-usage)
    * [Flags🎏](#flags)
@@ -12,7 +13,6 @@ A CLI-utility to turn 1 good picture into 4 shitty ones.
       + [Output📤](#output)
       + [Force](#force)
    * [Examples](#examples)
-      + [The original image](#the-original-image)
       + [Count - 2](#count-2)
          - [Stripes - 200](#stripes-200)
          - [Stripes - 40](#stripes-40)
@@ -53,7 +53,6 @@ Using this flag, the util will not print warnings, and recommend settings.
 $ py main.py <filename> --force
 ```
 ## Examples
-### The original image
 <p align="center">
   <img src="./examples/port_1.jpg" width=1500>
   The original image
