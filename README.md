@@ -2,7 +2,24 @@
 
 A CLI-utility to turn 1 good picture into 4 shitty ones.
 
-[Explanation](https://www.reddit.com/r/interestingasfuck/comments/95akrt/transforming_one_photo_of_a_dog_into_four_with_a/) (and my inspiration). 
+[Explanation](https://www.reddit.com/r/interestingasfuck/comments/95akrt/transforming_one_photo_of_a_dog_into_four_with_a/) (and my inspiration).  
+
+- [shredder](#shredder)
+   * [Basic Usage](#basic-usage)
+   * [Flags🎏](#flags)
+      + [Count🔁](#count)
+      + [Stripes✂️](#stripes)
+      + [Output📤](#output)
+      + [Force](#force)
+   * [Examples](#examples)
+      + [The original image](#the-original-image)
+      + [Count - 2](#count-2)
+         - [Stripes - 200](#stripes-200)
+         - [Stripes - 40](#stripes-40)
+         - [Stripes - 10](#stripes-10)
+      + [Count 4](#count-4)
+         - [Stripes - 200](#stripes-200-1)
+         - [Stripes - 40](#stripes-40-1)
 
 ## Basic Usage
 ```console
