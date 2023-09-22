@@ -9,7 +9,7 @@ def make_strips(im, n_strings):
         im = im.crop((0, 0, WIDTH, HEIGHT - 1))
         HEIGHT -= 1
     print(im.format, im.size, im.mode)
-    new_image = Image.new("RGB", (WIDTH * 2, HEIGHT // 2))
+    new_image = Image.new(im.mode, (WIDTH * 2, HEIGHT // 2))
 
     for i in range(0, n_strings):
 

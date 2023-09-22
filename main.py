@@ -42,8 +42,8 @@ def hello(filename, count, stripes, output, force):
         if ok == "" or ok == "y":
             count += 1
 
-    if stripes % 2 != 0 and not force:
-        print("You entered an odd number for stripes, so the result images will slightly differ in width.")
+    if stripes % count != 0 and not force:
+        print("Number of stripes is not divisibel by count, so the result images will slightly differ in width.")
     output_image = shredder(input_image, count, stripes)
     if output:
         output_image.save(output)
