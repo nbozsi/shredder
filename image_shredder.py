@@ -26,12 +26,13 @@ def make_strips(im, n_strings):
     return new_image
 
 
-def shredder(image, count, strips):
+def shredder(image, count, w_stripes, h_stripes):
     for i in range(count):
-        image = make_strips(image, strips)
         if i % 2 == 0:
+            image = make_strips(image, w_stripes)
             image = image.transpose(Image.Transpose.ROTATE_90)
         else:
+            image = make_strips(image, h_stripes)
             image = image.transpose(Image.Transpose.ROTATE_270)
     return image
 
