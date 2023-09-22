@@ -53,3 +53,43 @@ $ py main.py <filename>
 </p>
 
 ---
+
+```console
+$ py main.py <filename> --stripes 40
+```
+
+<p align="center">
+  <img src="./examples/port_1_shredded_2-40.jpg" width=1500>
+</p>
+
+---
+
+```console
+$ py main.py <filename> -s 10
+```
+
+<p align="center">
+  <img src="./examples/port_1_shredded_2-10.jpg" width=1500>
+</p>
+
+---
+
+```console
+$ py main.py <filename> --count 4
+```
+
+<p align="center">
+  <img src="./examples/port_1_shredded_4-200.jpg" width=1500>
+</p>
+
+---
+
+```console
+$ py main.py <filename> -c 4 -s 40
+```
+
+<p align="center">
+  <img src="./examples/port_1_shredded_4-40.jpg" width=1500>
+</p>
+
+---
