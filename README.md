@@ -36,14 +36,14 @@ Using this flag, the util will not print warnings, and recommend settings.
 $ py main.py <filename> --force
 ```
 ## Examples
-
+The original image.
 <p align="center">
   <img src="./examples/port_1.jpg" width=1500>
 </p>
----
+---  
 ```console
 $ py main.py <filename>
 ```
 <p align="center">
-  <img src="./examples/port_1_shredded_2_200.jpg" width=1500>
+  <img src="./examples/port_1_shredded_2-200.jpg" width=1500>
 </p>
