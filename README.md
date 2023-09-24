@@ -12,12 +12,12 @@ A CLI-utility to turn 1 good picture into 4/16/256/... shitty ones.
       + [Output📤](#output)
       + [-w](#-w)
    * [Examples](#examples)
-      + [Count - 2](#count-2)
+      + [Count - 2](#count---2)
          - [Stripes - 200](#stripes---200)
          - [Stripes - 40](#stripes---40)
          - [Stripes - 10](#stripes---10)
          - [Stripes - 10 and 4](#stripes---10-and-4)
-      + [Count 4](#count-4)
+      + [Count 4](#count---4)
          - [Stripes - 200](#stripes---200-1)
          - [Stripes - 40](#stripes---40-1)
 
@@ -111,7 +111,7 @@ $ py main.py <filename> -s 10 -s 4
 
 ---
 
-### Count 4
+### Count - 4
 #### Stripes - 200
 
 ```console
