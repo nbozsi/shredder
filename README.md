@@ -1,14 +1,14 @@
 # shredder
 
 A CLI-utility to turn 1 good picture into 4/16/256/... shitty ones.
+[Explanation](https://www.reddit.com/r/interestingasfuck/comments/95akrt/transforming_one_photo_of_a_dog_into_four_with_a/) (and my inspiration).  
 
-[Explanation](https://www.reddit.com/r/interestingasfuck/comments/95akrt/transforming_one_photo_of_a_dog_into_four_with_a/) (and my inspiration).   
 **Table of Contents**
    * [Basic Usage](#basic-usage)
    * [Flags🎏](#flags)
       + [Count🔁](#count)
       + [Stripes✂️](#stripes)
-      + [Keep↔️](#keep)
+      + [Keep↔️](#keeep)
       + [Output📤](#output)
       + [-w](#-w)
    * [Examples](#examples)
@@ -42,7 +42,7 @@ Use this option twice to make custom aspect ratios, instead of the default squar
 ```console
 $ py main.py <filename> --s <int> -s <int>
 ```
-### Keep↔️
+### Keeep↔️
 Using this flag, the small rectangles aspect ratio will match the aspect ratio of the original image.
 **default**: `<originalfilename>_shredded_<count>-<stripes>.<original extension>`
 ```console
