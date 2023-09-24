@@ -8,7 +8,7 @@ A CLI-utility to turn 1 good picture into 4/16/256/... shitty ones.
    * [Flags🎏](#flags)
       + [Count🔁](#count)
       + [Stripes✂️](#stripes)
-      + [Keep↔️](#keeep)
+      + [Keep↔️](#keep%EF%B8%8F)
       + [Output📤](#output)
       + [-w](#-w)
    * [Examples](#examples)
@@ -42,9 +42,8 @@ Use this option twice to make custom aspect ratios, instead of the default squar
 ```console
 $ py main.py <filename> --s <int> -s <int>
 ```
-### Keeep↔️
+### Keep↔️
 Using this flag, the small rectangles aspect ratio will match the aspect ratio of the original image.
-**default**: `<originalfilename>_shredded_<count>-<stripes>.<original extension>`
 ```console
 $ py main.py <filename> --keep
 ```
