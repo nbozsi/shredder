@@ -5,9 +5,9 @@ import os
 
 
 def potential_filenames(filename):
-    extensions = {"jpg", "png", "jfif"}
+    EXTENSIONS = {"jpg", "png", "jfif"}
 
-    for ext in extensions:
+    for ext in EXTENSIONS:
         yield f"{filename}.{ext}"
 
 
@@ -25,11 +25,11 @@ def try_options(image_filename):
 @click.command()
 @click.argument("filename")
 @click.option('-c', "--count", default=2, help="Number of reshreds", show_default=True)
-@click.option('-s', "--stripes", default=(200, 200), multiple=True, help="Number of the stripes", show_default=True)
+@click.option('-s', "--stripes", default=(200,), multiple=True, help="Number of the stripes", show_default=True)
 @click.option('-o', "--output", default=None, help="Name of the output file")
-@click.option("--squared", is_flag=True, default=False, help="Make the small rectangles squares")
+@click.option("--same", is_flag=True, default=False, help="Make the aspect ratio of the small rectangles the same as the original aspect ratio")
 @click.option('-w', is_flag=True, default=False, help="No help finding files/rounding count and no warnings etc..")
-def hello(filename, count, stripes, output, squared, w):
+def hello(filename, count, stripes, output, same, w):
 
     # filename
     if os.path.exists(filename) or w:
@@ -47,28 +47,27 @@ def hello(filename, count, stripes, output, squared, w):
 
     # stripes
     if len(stripes) == 1:
-        stripes += stripes
+        stripes = (stripes[0],)
+        WIDTH, HEIGHT = input_image.size
+        stripes += ((2 * WIDTH*stripes[0])//HEIGHT,)
 
     # if stripes % count != 0 and not w:
     #    print("The number of stripes is not divisible by count, so the result images will slightly differ in width.")
 
-    # squared
-    if squared:
-        print(stripes)
-        if len(stripes) > 1:
-            print("Can't make it square like this, 2nd stripes arg is ignored")
-            stripes = (stripes[0],)
-        d = stripes[0]
-        WIDTH, HEIGHT = input_image.size
-        stripes += ((2 * WIDTH*stripes[0])//HEIGHT,)
+    # same
+    if same:
+        stripes = (stripes[0],)
+        stripes += (stripes[0]*2,)
 
     output_image = shredder(input_image, count, *stripes)
     if output:
         output_image.save(output)
     else:
         name, extension = filename.split(".")
-        output_image.save(
-            "{}_shredded_{}-{}-{}.{}".format(name, count, *stripes, extension))
+        output_filename = "{}_shredded_{}-{}-{}.{}".format(
+            name, count, *stripes, extension)
+        print(f"Saved as {output_filename}")
+        output_image.save(output_filename)
 
 
 if __name__ == "__main__":
