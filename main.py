@@ -27,9 +27,9 @@ def try_options(image_filename):
 @click.option('-c', "--count", default=2, help="Number of reshreds", show_default=True)
 @click.option('-s', "--stripes", default=(200,), multiple=True, help="Number of the stripes", show_default=True)
 @click.option('-o', "--output", default=None, help="Name of the output file")
-@click.option("--same", is_flag=True, default=False, help="Make the aspect ratio of the small rectangles the same as the original aspect ratio")
+@click.option("-k", "--keep", is_flag=True, default=False, help="Keeps the image's aspect ratio")
 @click.option('-w', is_flag=True, default=False, help="No help finding files/rounding count and no warnings etc..")
-def hello(filename, count, stripes, output, same, w):
+def hello(filename, count, stripes, output, keep, w):
 
     # filename
     if os.path.exists(filename) or w:
@@ -55,7 +55,7 @@ def hello(filename, count, stripes, output, same, w):
     #    print("The number of stripes is not divisible by count, so the result images will slightly differ in width.")
 
     # same
-    if same:
+    if keep:
         stripes = (stripes[0],)
         stripes += (stripes[0]*2,)
 
