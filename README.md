@@ -1,22 +1,23 @@
 # shredder
 
 A CLI-utility to turn 1 good picture into 4/16/256/... shitty ones.
-
 [Explanation](https://www.reddit.com/r/interestingasfuck/comments/95akrt/transforming_one_photo_of_a_dog_into_four_with_a/) (and my inspiration).  
-The aspect ratio of the small rectangles will be *2\*W : H*, the number of stripes has zero impact on this, (for example with a photo twice as high as wide, the small rectangles will always be squares).  
+
 **Table of Contents**
    * [Basic Usage](#basic-usage)
    * [Flags🎏](#flags)
       + [Count🔁](#count)
       + [Stripes✂️](#stripes)
+      + [Keep↔️](#keep%EF%B8%8F)
       + [Output📤](#output)
       + [-w](#-w)
    * [Examples](#examples)
-      + [Count - 2](#count-2)
+      + [Count - 2](#count---2)
          - [Stripes - 200](#stripes---200)
          - [Stripes - 40](#stripes---40)
          - [Stripes - 10](#stripes---10)
-      + [Count 4](#count-4)
+         - [Stripes - 10 and 4](#stripes---10-and-4)
+      + [Count - 4](#count---4)
          - [Stripes - 200](#stripes---200-1)
          - [Stripes - 40](#stripes---40-1)
 
@@ -33,12 +34,20 @@ Number of "reshreds". Recommended to be even, cause with odd numbers, the result
 $ py main.py <filename> --count <int>
 ```
 ### Stripes✂️
-Number of stripes made from the image, when it's an odd number, the result images will slightly differ in width.  
+Number of stripes made from the image, when it's an odd number, the result images will slightly differ in width.
 **default**: `200`
 ```console
 $ py main.py <filename> --stripes <int>
 ```
-
+Use this option twice to make custom aspect ratios, instead of the default squared.  
+```console
+$ py main.py <filename> --s <int> -s <int>
+```
+### Keep↔️
+Using this flag, the small rectangles aspect ratio will match the aspect ratio of the original image.
+```console
+$ py main.py <filename> --keep
+```
 ### Output📤
 Path/name of the output file.  
 **default**: `<originalfilename>_shredded_<count>-<stripes>.<original extension>`
@@ -67,7 +76,7 @@ $ py main.py <filename>
 ```
 
 <p align="center">
-  <img src="./examples/port_1_shredded_2-200.jpg" width=1500>
+  <img src="./examples/port_1_shredded_2-200-531.jpg" width=1500>
 </p>
 
 #### Stripes - 40
@@ -77,7 +86,7 @@ $ py main.py <filename> --stripes 40
 ```
 
 <p align="center">
-  <img src="./examples/port_1_shredded_2-40.jpg" width=1500>
+  <img src="./examples/port_1_shredded_2-40-106.jpg" width=1500>
 </p>
 
 #### Stripes - 10
@@ -87,12 +96,22 @@ $ py main.py <filename> -s 10
 ```
 
 <p align="center">
-  <img src="./examples/port_1_shredded_2-10.jpg" width=1500>
+  <img src="./examples/port_1_shredded_2-10-26.jpg" width=1500>
+</p>
+
+#### Stripes - 10 and 4
+
+```console
+$ py main.py <filename> -s 10 -s 4
+```
+
+<p align="center">
+  <img src="./examples/port_1_shredded_2-10-4.jpg" width=1500>
 </p>
 
 ---
 
-### Count 4
+### Count - 4
 #### Stripes - 200
 
 ```console
@@ -100,7 +119,7 @@ $ py main.py <filename> --count 4
 ```
 
 <p align="center">
-  <img src="./examples/port_1_shredded_4-200.jpg" width=1500>
+  <img src="./examples/port_1_shredded_4-200-531.jpg" width=1500>
 </p>
 
 #### Stripes - 40
@@ -110,7 +129,7 @@ $ py main.py <filename> -c 4 -s 40
 ```
 
 <p align="center">
-  <img src="./examples/port_1_shredded_4-40.jpg" width=1500>
+  <img src="./examples/port_1_shredded_4-40-106.jpg" width=1500>
 </p>
 
 ---
