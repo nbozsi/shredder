@@ -2,7 +2,7 @@ from PIL import Image
 import os
 
 
-def make_strips(im, n_strings):
+def make_strips(im: Image, n_strings: int):
     """Splits the image into strips and make two images from them like 'one here, one there'"""
     WIDTH, HEIGHT = im.size
     if HEIGHT % 2 == 1:
@@ -26,7 +26,7 @@ def make_strips(im, n_strings):
     return new_image
 
 
-def shredder(image, count, w_stripes, h_stripes):
+def shredder(image: Image, count: int, w_stripes: int, h_stripes: int):
     for i in range(count):
         if i % 2 == 0:
             image = make_strips(image, w_stripes)
