@@ -4,14 +4,14 @@ from PIL import Image
 import os
 
 
-def potential_filenames(filename):
+def potential_filenames(filename: str):
     EXTENSIONS = {"jpg", "png", "jfif"}
 
     for ext in EXTENSIONS:
         yield f"{filename}.{ext}"
 
 
-def try_options(image_filename):
+def try_options(image_filename: str):
     # maybe only the fileformat is wrong, so try out some others
     image_name = image_filename.split(".")[0]  # cuts down the file extension
     for image_filename in potential_filenames(image_name):
