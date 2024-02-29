@@ -4,3 +4,4 @@
 *.dng
 settings.json
 *pyc
+.venv
